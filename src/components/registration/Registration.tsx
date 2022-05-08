@@ -4,7 +4,7 @@ import { TextInput, Button, Title } from '../shared';
 import { useValidatedState } from '../../hooks';
 import { Validator } from '../../validators';
 import { registrationHandler } from '../../handlers';
-import { LINKS } from '../../const';
+import { LINKS, PROJECT_NAME } from '../../const';
 
 const RegistrationWrapper = styled.div`
   position: absolute;
@@ -105,7 +105,7 @@ export const Registration: FC = () => {
   return (
     <RegistrationWrapper>
       <div className="label">GTA PROJECT</div>
-      <div className="project">CONNECTED LINE</div>
+      <div className="project">{PROJECT_NAME}</div>
       <Title title="Регистрация аккаунта" />
       <div className="warning">
         Регистрируя аккаунт на нашем проекте, <br />
