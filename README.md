@@ -7,3 +7,5 @@
 1) Установить ссылочки на свои [ресурсы и название проекта](src/const/const.ts)
 2) Добавить свою логику [логина и регистрации](src/handlers)
 3) Изменить логику проверки [введенных данных](src/validators/validator.ts)
+
+![project screenshot](img.png)
