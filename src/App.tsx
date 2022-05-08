@@ -1,26 +1,48 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { FC } from 'react';
+import {
+  Background,
+  Communities,
+  Login,
+  Registration,
+  Title,
+} from './components';
+import styled from 'styled-components';
 
-function App() {
+const AppWrapper = styled.div`
+  * {
+    font-family: 'Gilroy', sans-serif;
+  }
+
+  a {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #5d9275;
+    text-decoration: none;
+    :hover {
+      cursor: pointer;
+    }
+  }
+  .app-title {
+    position: absolute;
+    left: 68px;
+    top: 74px;
+    width: 430px;
+  }
+`;
+
+export const App: FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppWrapper>
+      <Background>
+        <div className="app-title">
+          <Title title={'Нет аккаунта? пройди регистрацию'} />
+        </div>
+        <Registration />
+        <Login />
+        <Communities />
+      </Background>
+    </AppWrapper>
   );
-}
-
-export default App;
+};
